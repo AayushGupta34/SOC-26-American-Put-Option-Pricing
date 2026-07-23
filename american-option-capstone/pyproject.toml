@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "american-option-capstone"
+version = "0.1.0"
+description = "American put pricing: binomial tree, NN pricer, RL exercise policy"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "torch",
+    "matplotlib",
+    "pandas",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["pricing", "data", "ml", "rl", "evaluation"]
