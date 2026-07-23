@@ -1,11 +1,6 @@
 # Week 9 Final Capstone — American Put Option Pricing
 ### CRR Binomial vs. Neural-Network Pricer vs. RL Exercise Policy
 
-*Draft — written in the third person from computed results. Convert to PDF
-and rewrite the reflection/discussion sections in your own voice before
-submitting; the numbers themselves come straight from `compare_all.py`'s
-output and don't need to change unless you rerun with different seeds/grids.*
-
 ---
 
 ## 1. Executive Summary
