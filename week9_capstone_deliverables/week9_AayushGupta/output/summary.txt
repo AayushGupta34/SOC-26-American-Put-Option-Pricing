@@ -1,0 +1,23 @@
+Week 9 Capstone -- Unified Comparison Summary
+==================================================
+
+Contracts evaluated (binomial vs NN): 168
+  mae: 0.083221
+  rmse: 0.103498
+  max_abs_error: 0.282930
+  mean_bias: -0.013172
+  median_abs_error: 0.070577
+  mean_relative_error: 1.334103
+  intrinsic_violations: 24 / 168
+  spot-monotonicity violations: 0
+
+RL contract (week8): S0=100.0 K=100.0 T=1.0 r=0.05 sigma=0.25 steps=50
+  binomial (American) price: 7.9520
+               policy    value  std_error  exercise_rate  avg_exercise_step
+always-hold-to-expiry 7.447945   0.109804          0.000                NaN
+                  dqn 6.210630   0.043532          0.787          18.610546
+               random 0.974224   0.022248          1.000           1.014400
+   immediate-exercise 0.000000   0.000000          1.000           0.000000
+  boundary agreement (DQN vs binomial-optimal): 0.6258
+
+NOTE: the RL comparison above is single-contract -- dqn_online.pt was trained only against this one contract's risk-neutral dynamics, not the full grid. See reports/ for the full limitations discussion.
